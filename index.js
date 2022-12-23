@@ -1,5 +1,3 @@
-/* buttons have to work, add a 'new game' button, highlight the leader, add counters for timer, period , fouls
-*/
 let timeAtStart = new Date().toLocaleTimeString()
 console.log("Start: " + timeAtStart)
 
@@ -7,15 +5,8 @@ let homeScoreText = document.getElementById("home-score-text")
 let guestScoreText = document.getElementById("guest-score-text")
 let homeScoreCount = 0
 let guestScoreCount = 0
-let startTestButton = document.getElementById("start-test-btn")
-let endTestButton = document.getElementById("end-test-btn")
-let testSpan = document.getElementById("test-span")
-let count = 0
 let guesth3 = document.getElementById("guest-h3")
 let homeh3 = document.getElementById("home-h3")
-
-
-
 
 function oneHomePoint() {
     homeScoreCount++
@@ -30,18 +21,6 @@ function oneGuestPoint() {
     highlightLeader()
     console.log("guest point, score is now " + guestScoreCount)
 }
-
-
-function c() {
-    count++
-    testSpan.textContent = count
-}
-
-function cl() {
-    count--
-    testSpan.textContent = count
-}
-
 
 function highlightLeader() {
     if (guestScoreCount == homeScoreCount) {
